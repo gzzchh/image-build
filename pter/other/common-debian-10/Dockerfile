@@ -1,9 +1,9 @@
 # ----------------------------------
 # Pterodactyl Core Dockerfile
-# Environment: Minecraft Bedrock Server
+# Environment: Common Debian 10
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM debian
+FROM debian:10
 
 LABEL org.opencontainers.image.authors="echoes@yqemail.com"
 LABEL org.opencontainers.image.vendor="YunQiaoLD"
