@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 TZ=${TZ:-UTC}
 export TZ
 
