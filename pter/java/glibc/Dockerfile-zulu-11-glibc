@@ -8,8 +8,9 @@ FROM azul/zulu-openjdk-debian:11
 LABEL org.opencontainers.image.authors="echoes@yqemail.com"
 LABEL org.opencontainers.image.vendor="YunQiaoLD"
 
-RUN apk --no-cache update && \
-    apk --no-cache add bash curl wget tzdata && \
+RUN apt update && \
+    apt install -y --no-install-recommends bash curl wget tzdata && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     adduser -D -h /home/container container
 
 USER container
