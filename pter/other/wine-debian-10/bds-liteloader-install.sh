@@ -11,3 +11,12 @@ unzip LiteLoader.zip
 rm bedrock-server-${LITELOADER_VERSION}.zip
 rm LiteLoader.zip
 # 这里还需要补充一个 vcruntime140_1 自己想办法
+# 然后我们把导出符号什么的推迟到运行的时候进行
+cat <<EOF > start.sh
+wine SymDB2.exe
+rm PDB_Symdef.txt
+rm -rf .wine
+wine bedrock_server.exe
+EOF
+# 最后修正一下权限啦
+chmod +x start.sh
