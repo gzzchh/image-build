@@ -21,10 +21,11 @@ RUN apt update && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
     apt-key add winehq.key && \
     rm -f winehq.key && \
-    apt remove gnupg gnupg2 && \
+    apt remove gnupg gnupg2 -y && \
     echo "deb https://dl.winehq.org/wine-builds/debian/ buster main" > /etc/apt/sources.list.d/winehq.list && \
     apt update && \
     apt install -y --no-install-recommends winehq-stable && \
+    apt autoremove -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 USER container
