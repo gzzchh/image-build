@@ -9,7 +9,7 @@ LABEL org.opencontainers.image.authors="echoes@yqemail.com"
 LABEL org.opencontainers.image.vendor="YunQiaoLD"
 
 RUN apk --no-cache update && \
-    apk --no-cache add bash curl wget tzdata && \
+    apk --no-cache add bash curl wget tzdata ca-certificates && \
     adduser -D -h /home/container container
 
 USER container

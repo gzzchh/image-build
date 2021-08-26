@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.vendor="YunQiaoLD"
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
-    apt install -y --no-install-recommends bash curl wget tzdata && \
+    apt install -y --no-install-recommends bash curl wget tzdata ca-certificates && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     adduser -D -h /home/container container
 
