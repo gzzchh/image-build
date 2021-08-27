@@ -22,7 +22,7 @@ RUN apt update && \
     wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | apt-key add - && \
     apt-get update && apt install -y --install-recommends winehq-stable && \
     apt remove gnupg gnupg2 -y && \
-    echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./" > /etc/apt/sources.list.d/wine-obs.list && \
+    echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./" > /etc/apt/sources.list.d/wine-obs.list && \
     echo "deb https://dl.winehq.org/wine-builds/debian/ buster main" > /etc/apt/sources.list.d/winehq.list && \
     apt update && \
     apt install -y --no-install-recommends winehq-stable && \

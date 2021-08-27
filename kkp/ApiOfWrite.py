@@ -100,7 +100,7 @@ def apiReq(method, a, url, data='QAQ'):
 
 # 上传文件到onedrive(小于4M)
 def uploadFile(a, filesname, f):
-    url = r'https://graph.microsoft.com/v1.0/me/drive/root:/AutoApi/App' + \
+    url = r'https://graph.microsoft.com/v1.0/me/drive/root:/ServerReport/App' + \
         str(a)+r'/'+filesname+r':/content'
     apiReq('put', a, url, f)
 
